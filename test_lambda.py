@@ -1,6 +1,7 @@
 # test_lambda.py (Pruebas unitarias con pytest)
 import pytest
 import requests
+import os
 from unittest.mock import patch, Mock
 
 from descargador.proyecto import download_page
