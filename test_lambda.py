@@ -14,7 +14,7 @@ def test_download_page_success():
         mock_response.status_code = 200
         mock_response.text = "<html><body>Test HTML</body></html>"
         mock_get.return_value = mock_response
-        os.makedirs(f"/tmp/landing-casas-{curr_date}", exist_ok=True)
+        os.makedirs(f"/tmp/landing-casas-{2025-03-10}", exist_ok=True)
         file_name = download_page(1, "2025-03-10")
         assert file_name is not None
 
