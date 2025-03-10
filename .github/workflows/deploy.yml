@@ -52,4 +52,8 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy Lambda Function
-        run: zappa update dev
+        run: |
+          cd descargador
+          zappa update dev
+          cd ../scraper
+          zappa update dev
