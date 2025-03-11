@@ -17,5 +17,11 @@
         "apigateway_enabled": false,
         "manage_roles": false,
         "role_name": "LabRole"
+        "events": [
+          {
+            "function": "proyecto.app",
+            "expression": "cron(0 9 ? * 2 *)"
+          }
+        ]
     }
 }
