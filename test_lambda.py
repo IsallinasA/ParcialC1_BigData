@@ -1,4 +1,3 @@
-# test_lambda.py (Pruebas unitarias con pytest)
 import pytest
 import requests
 import os
