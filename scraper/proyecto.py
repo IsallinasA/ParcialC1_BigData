@@ -71,7 +71,7 @@ def app(event, context):
     if not HTML_EXTENSION.match(record["s3"]["object"]["key"]):
         print("❌ El archivo no es un HTML")
         return {
-            "statusCode": 400,  # Bad request
+            "statusCode": 400,  
             "body": json.dumps({"message": "El archivo no es un HTML"}),
         }
 
