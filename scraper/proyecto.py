@@ -22,7 +22,7 @@ def extract_info(html_content, curr_date):
         num_banos = 0
         banos_tag = house.find("p", {"data-test": "bathrooms"})
         if banos_tag:
-            num_banos = banos_tag.text.strip().split()[0]  # Extrae solo el número
+            num_banos = banos_tag.text.strip().split()[0] 
         
         data.append([
             curr_date, barrio, valor, num_habitaciones, num_banos, mts2
