@@ -47,9 +47,10 @@ jobs:
           pip install -r requirements.txt
           pip install zappa
           
-      
-      - name: Run Tests (pytest)
-        run: pytest      
+      - name: Run Tests (pytest)     
+        run: | 
+          source venv/bin/activate
+          pytest
 
       - name: Configure AWS Profile
         run: |
