@@ -21,7 +21,7 @@ def extract_info(html_content, curr_date):
         num_banos = 0
         banos_tag = house.find("p", {"data-test": "bathrooms"})
         if banos_tag:
-            num_banos = banos_tag.text.strip().split()[0] 
+            num_banos = banos_tag.text.strip().split()[0]
         
         data.append([
             curr_date, barrio, valor, num_habitaciones, num_banos, mts2
@@ -70,13 +70,12 @@ def app(event, context):
     if not HTML_EXTENSION.match(record["s3"]["object"]["key"]):
         print("❌ El archivo no es un HTML")
         return {
-            "statusCode": 400,  
+            "statusCode": 400,
             "body": json.dumps({"message": "El archivo no es un HTML"}),
         }
 
     file = record["s3"]["object"]["key"]
 
-    # Download the file
     s3_client = boto3.client('s3')
     try:
         response = s3_client.get_object(
