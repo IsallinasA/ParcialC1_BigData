@@ -18,7 +18,6 @@ def extract_info(html_content, curr_date):
         num_habitaciones = house.get("data-rooms")
         mts2 = house.get("data-floorarea")
         
-        # Extraer los baños
         num_banos = 0
         banos_tag = house.find("p", {"data-test": "bathrooms"})
         if banos_tag:

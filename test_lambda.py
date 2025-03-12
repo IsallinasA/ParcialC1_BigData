@@ -1,5 +1,5 @@
-import pytest
-import requests
+import pytest  # noqa: F401
+import requests  # noqa: F401
 import os
 from unittest.mock import patch, Mock
 
