@@ -5,7 +5,6 @@ from datetime import date
 import boto3
 from botocore.exceptions import ClientError
 
-#este es la funcion de lambda principal
 
 def download_page(page_index, curr_date):
     headers = {
