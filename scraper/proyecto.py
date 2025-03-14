@@ -31,6 +31,7 @@ def extract_info(html_content, curr_date):
 
 
 def save_to_csv(data, filename):
+    #comentario
     with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow([
